@@ -1,0 +1,24 @@
+1. what is the diffrence between React.Js and Next.Js ?
+        React is not full Production ready framework, as we need to handle the Routing,
+    styling,Authentication etc
+
+        where as in next.js comes with full fledged production ready app by providing
+    Routing,styling,Authentication,styling,bundle optimization
+    so no need to manually install other packages
+    
+2. Featues of Next.js
+    a. File based Routing - in react you need to install 3rd party lib for rerouting
+            but in Next.js it is inbuilt and components inside Pages folder itself 
+            acts as a router
+    
+    b. pre-rendering - next.js generates HTML for each page in advance insted of 
+            having done by client side itself. better perfomance and useful for SEO
+        
+    c. API Routes - create APIs from next, create UI as well as API.
+
+    d. Support for CSS modules - supports out of the box, independently write CSS for 
+            each page
+
+    e. Authentication - supports diffrent Authentication patterns
+
+    f. Dev and Prod build system - concentrate on BL rather than configuration
