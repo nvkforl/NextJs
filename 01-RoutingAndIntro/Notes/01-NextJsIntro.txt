@@ -22,3 +22,7 @@
     e. Authentication - supports diffrent Authentication patterns
 
     f. Dev and Prod build system - concentrate on BL rather than configuration
+
+3. Creating a new App 
+        npx create-next-app hello
+
