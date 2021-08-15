@@ -1,2 +1,64 @@
 Intro to Routing Section 
 ------------------------
+
+Types of Routing in Next.js App
+
+a. Route with Pages - Add a page inside Page folder 
+
+b. Nested Routes - Add a folder and then Add a page the it becomes a nested page
+
+c. Dynamic Routes - Insted of creating static pages like product1,product2,product3 .. so on
+        So insted create a Dynamic route file using [] -> example [productId].js so that dynamic
+        product details are fetched. and then grab the ID by Router hook
+        Suppose i have 2 pages [ProductId].js and sweater.js file 
+        then in the url has - http://localhost:3000/product-Dynamic/sweater
+        then it looks for sweater.js file but not [ProductId].js
+
+d. Catch-all Routes - Suppose we have complex routes like Feature1 has concept1,concept2 
+        and so on.. FeatureN x ConceptN = N number of files needs to be created.so to address 
+        this.. we create a file with spread operator docs -> [...docs].js -> reviews -> [review].js
+        http://localhost:3000/docs_CatchAllPages/feature1/concept20 -> here it has 2 params
+        feature1 & concept20 that is dynamic, useful for SEO.
+
+        if we create js with double square brackets like [[...params]].js -> then when we access
+        Before: http://localhost:3000/docs_CatchAllPages -> 404 page not found Error
+        After: http://localhost:3000/docs_CatchAllPages -> Default Docs page is displayed
+
+e. Navigate from UI -> 
+        import Link from "next/link";
+        <Link href="/product-Dynamic">
+           <a>Product</a>
+        </Link>
+
+        <h1>
+           <Link href="/product-Dynamic/3" replace> -> naviages to Product3 page, when cliked 
+               <a>Product 3</a>                        on browser back then,it will
+           </Link>                                     be redirected to home page insted of 
+        </h1>                                          Product_Dynamic page
+        
+        ***Replace prop is used to replace current history url to home page insted moving to Product_Dynamic page 
+
+f. Programatically naviage b/w pages -> we can naviagte to Nested Routes,Catch-all Routes,
+                                        Navigate from UI
+
+        const myRouter = useRouter();
+        import { useRouter } from "next/router";
+
+        const handleClick = () => {
+            myRouter.push("/product-Dynamic");
+            or 
+            myRouter.replace("/product-Dynamic"); -> both replace and push functionality remains same
+        };
+
+        <button onClick= {handleClick}>Place Order</button>
+
+
+1. Pages Folder is responsible for Routing
+2. Whenever a page/file is added inside Pages folder it will be available to public
+3. index.js will map to the root of the domain
+4. use of variable name is important, it should be params not myParams
+        const myRouter = useRouter();
+        const { params = [] } = myRouter.query;
+5. Creating Custom 404 page
+        1. create 404.js file 
+        2. Add content and export it 
