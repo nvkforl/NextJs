@@ -1,0 +1,24 @@
+When to use Static Generation?
+
+1. HTML Pages are generated at build Time
+2. Recommended method to pre-render pages whenever possible
+3. pages are built once and cached by CDN ans served to clients instently
+4. mainly used for 
+    a) Blog Pages 
+    b) E-Commerce Product Pages
+    c) Documentation
+    d) Marketing Pages
+
+How to create Static Generation?
+
+1. NextJs will always pre-render every page in the app
+2. HTML for every page will be automatically be statically generated when we build our app
+    Prod Server -  An optimized build is created once and you deploy the build. You Dont Marketing
+                   any changes at the Run Time - This allows page to be cached by CDN and 
+                   indexed by search engine.
+    Dev Server -  in this mode the page is rendered when there a changein the code
+
+
+What is Static Generation with and without Data?
+ 1. Pages that can be genrated without external data is called Static Generation without Data
+ 2. Pages that can be genrated with external data/api is called Static Generation with Data

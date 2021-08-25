@@ -1,0 +1,12 @@
+what is pre-rendering ?
+
+HTML code is generated in the server side itself.
+
+in ReactJs - we have the Root element and HTML elements are hidden inside the JavaScript
+
+in NextJS - There HTML is rendered as it is, i.e HTML not hidden in JS so it helps in SEO.
+
+There are 2 Types of rendering
+
+1. Static Generation
+2. Server-Side Rendering 

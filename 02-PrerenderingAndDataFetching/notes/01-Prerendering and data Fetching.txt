@@ -1,0 +1,13 @@
+A.Types of Pre-Rendering
+
+    1. Static Generation
+        - Without Data
+        - With Data
+        - Incremental Static Genaration
+        - Dynamic parameters when fetching Data
+
+    2. Server side Rendering
+        - data fetching
+
+B. Client-side data fetching
+C. Combining pre-rendering with client-side data fetching
