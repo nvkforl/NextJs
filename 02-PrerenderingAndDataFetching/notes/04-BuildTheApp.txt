@@ -1,0 +1,4 @@
+To build the app use 
+1. npm -> npm run build
+2. yarn -> yarn build
+

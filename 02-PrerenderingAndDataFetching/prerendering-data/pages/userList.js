@@ -1,3 +1,5 @@
+import User from "../components/user";
+
 function userList({ users }) {
   return (
     <>
@@ -5,8 +7,7 @@ function userList({ users }) {
       {users.map((user) => {
         return (
           <div key={user.id}>
-            <p>{user.name}</p>
-            <p>{user.email}</p>
+            <User user={user} />
           </div>
         );
       })}
@@ -17,8 +18,8 @@ function userList({ users }) {
 export default userList;
 
 export async function getStaticProps() {
-  const responce = await fetch("https://jsonplaceholder.typicode.com/users");
-  const data = await responce.json();
+  const response = await fetch("https://jsonplaceholder.typicode.com/users");
+  const data = await response.json();
   //console.log(data);
 
   return {

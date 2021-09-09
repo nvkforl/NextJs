@@ -1,0 +1,40 @@
+There are Two types of rendering 
+1. Static generation
+2. Server-Side generation
+
+Problems of Static generation
+-----------------------------
+1. pages are generated at build time
+2. due to build time and generated only once there is a high chances for stale data
+
+
+
+Advantages of Server-Side generation
+------------------------------------
+1. pages are generated at RunTime
+2. we use getServerSideProps() will run on server side only
+3. So the code logic will be hidden in the server itself and will not be exposed to the clent side
+4. So access the File System from fs module or querying a DB can be done inside getServerSideProps
+5. API keys can also be added in the getServerSideProps itself so that it will not be rendered to the client
+6. it runs inside a page only and connot be created as component
+7. So it can be used as pre-rendering but not data fetching
+8. getServerSideProps will return a object and object contains props key as an object
+9. getServerSideProps will run for each request
+
+
+Client side Data-fetching
+-------------------------
+
+1. reactJs we use useEffect hook so when the component is mounted the data will be fetched
+2. To handle this in NextJs, provides SWR
+3. SWR is the react hook while data fetching 
+    - catching
+    - revalidation 
+    - focus tracking 
+    - refeching in interval and so on...
+
+4.SWR (Stale while Re-validate) - A cache invalidation stratgy 
+5. installing SWR - npm install swr
+
+6. router.push("/events?category=sports", undefined, { shallow: true });
+        Shallow Routing helps in bookmarking the search and Helps in SEO

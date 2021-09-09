@@ -1,0 +1,40 @@
+Suppose blog/blogID
+then blogID is dynamic so it requires static generation wityh dynamic parameters
+
+
+Master-Detail UI Pattern also know as list Pattern
+
+by using the site - https://jsonplaceholder.typicode.com
+
+/post -> can be used for Master page
+/post/id -> can be used for Detail page 
+
+
+Error: getStaticPaths is required for dynamic SSG pages and is missing for '/posts/[postId]'.
+Read more: https://nextjs.org/docs/messages/invalid-getstaticpaths-value
+
+getStaticPaths and fallback
+---------------------------
+fallback: false
+    -   The paths returned from getStaticPaths will be rendered to HTML at build time by getStaticPaths
+    -   if No paths are returned by getStaticPaths then it results in 404
+    -   To be used when we have small app with fever pages
+    -   To be used whwn pages are not added frequently, Example: blog posts 
+
+fallback: true
+    -   when fallback: false when No paths are returned by getStaticPaths then it results in 404
+    -   but  when fallback: true then nextJS will statically generate HTML and JSON if not present
+    -   Need to add fallback page or loading text while loading the page
+    -   To be used when there is lot of static pages that depend on data. ex:Ecomm site
+
+fallback: blocking
+    -   same as fallback: true only diffrence is we no need to add the loading page
+    -   To be used at UX level, to avoid layout change so blocking be used
+    -   Some Web crawlers does not support JS, insted of loading page will be rendered insted of actual page
+
+Incemental Static Regeneration(ISR)
+----------------------------------
+To avoid stale data that is rendered due to static data rendered. so avoid stale data rendered then we use ISR
+    - By Using Revalidate Key
+    - Revalidate Key is the value in number of seconds after which re-regeneration can occur
+    

@@ -22,3 +22,18 @@ How to create Static Generation?
 What is Static Generation with and without Data?
  1. Pages that can be genrated without external data is called Static Generation without Data
  2. Pages that can be genrated with external data/api is called Static Generation with Data
+
+ export async function getStaticProps() -> it mandatory to return Props as an object
+
+ 
+getStaticProps
+---------------
+
+1. It always runs on server side only
+2. so it not added in JS bundle
+3. Accessing the file system using the fs module or quering the DB can be done in getStaticProps
+4. one super thing is you do not need to include API Keys in getStaticProps as it won't make it to browser
+5. getStaticProps will run in the Page only
+6. it retuns Props object if not caught then it throws error
+7. getStaticProps will run at build time 
+6. during devlopment getStaticProps, will run on every request
