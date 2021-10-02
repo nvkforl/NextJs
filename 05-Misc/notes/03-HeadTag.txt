@@ -1,0 +1,10 @@
+head tag is used for SEO and metatags
+
+import Head from "next/head";
+ <Head>
+    <title>Tile of the page used for SEO</title>
+    <meta name="description" content="learning NEXT JS by the tutorial"/>
+  </Head>
+
+  1. can be added to a single page for SEO
+  2. can be generic to all page if added in _App.js  file

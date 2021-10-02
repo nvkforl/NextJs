@@ -1,0 +1,11 @@
+we will  learn about 
+
+1. App layout 
+2. Head component
+3. image component
+4. Absolute imports and module paths
+5. Static HTML exports
+6. configure support for typescript
+7. Preview
+8. Next config file
+9. Environment variables

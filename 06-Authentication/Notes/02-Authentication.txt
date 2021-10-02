@@ -1,0 +1,14 @@
+Identity and Access
+    Identity  verifies who the user is  - Authentication    
+    Access verifies what permission the user has - Authorization
+
+1. In react app, it deals with authenticating the client side code
+2. in Next.js app, has three types for Authentication
+    a. Client-side Authentication
+    b. Server-side Authentication
+    c. API Routes Authorization
+
+4. if you do not want to persist the data the go for Auth services like Github,FB,Gmail
+5. if you want to persist the data the go for DB
+
+So we need to use next-auth.js 

@@ -1,0 +1,5 @@
+1. Showing the content based on the user is logged in or not
+2. This can be done by using session hook
+    import { signIn, signOut ,useSession} from "next-auth/client";
+
+    a. It returns 2 objects - session object & loading value

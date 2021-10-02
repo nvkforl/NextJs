@@ -1,0 +1,30 @@
+This is the url
+
+http://localhost:3000/api/auth/signin
+http://localhost:3000/api/auth/signout
+
+1. So when ever we login we see the cookies been set
+    next-auth.session-token is set 
+
+2. So when ever we logout we do not see the cookies
+    next-auth.session-token is removed in cookies tab
+
+2. Add this code in header.js file
+
+        <Link href="/api/auth/signin">
+          <a
+            onClick={(e) => {
+              e.preventDefault(), signIn();
+            }}
+          >
+            Sign In
+          </a>
+        </Link>
+        <Link href="/api/auth/signout">
+          <a
+            onClick={(e) => {
+              e.preventDefault(), signOut();
+            }}
+          >
+            Sign Out
+          </a>

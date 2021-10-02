@@ -1,0 +1,7 @@
+1.  yarn add next-auth
+    npm i next-auth
+2. create folder called auth
+        inside it create a catchAll routes [...nextauth].js
+
+http://localhost:3000/api/auth/signin
+http://localhost:3000/api/auth/signout

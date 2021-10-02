@@ -1,0 +1,35 @@
+serverside authentication can be done by provider in _app.js
+
+1. Check the session is valid and running while server side rendering
+    This is functionality will be applicable for getServerSideProps only
+
+2. if we set in _app.js
+        import {Provider} from 'next-auth/client';
+
+        <Provider>
+            <Header />
+            <Component {...pageProps} />
+        </Provider>
+
+        Then Provider will hit the session every time, this is not feasible
+
+        return { //in blog.js file
+            props: {
+                session,
+                data: session ? "List of 100 personalized blogs" : "List of free Blogs",
+            },
+        };  
+
+3. So to multiple call to session  we need to set in _app.js as "pageProps.session"
+        <Provider session={pageProps.session}>
+            <Header />
+            <Component {...pageProps} />
+        </Provider>
+
+        so in the getServerSideProps function, the props needs to return session along with data
+        return {
+            props: {
+                session,
+                data: session ? "List of 100 personalized blogs" : "List of free Blogs",
+            },
+        };        

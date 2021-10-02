@@ -1,0 +1,57 @@
+Relative imports
+Example: 
+    import Header from "../components/Header";
+    import "../styles/globals.css";
+
+Absolute Imports - import without ...
+    import Head from 'next/head'
+    import Image from 'next/image'
+
+
+to convert Relative imports to Absolute imports, need to configure
+
+1. Adding BaseUrl
+    A. create jsconfig.json file 
+        {
+            "compilerOptions": {
+            "baseUrl": "."  // current folder ... point.C can be implemented
+            }
+        }
+
+
+
+    B.  import Footer from "../components/Footer";
+        import Header from "../components/Header";
+        import "../styles/globals.css";
+        import "../styles/layout.css";  
+    
+        
+    C. From point 2 ../ can be replaced after adding in the point A
+        import Footer from "components/Footer";
+        import Header from "components/Header";
+        import "styles/globals.css";
+        import "styles/layout.css";
+
+
+
+2. Adding paths Aliaces it will simplyfy the imports
+    
+    A. "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/layout/*": [
+                "components/layout/*"
+            ]
+        }
+    }
+
+
+    B. move the Header and Footer componets to Layouts folder
+        and the replace 
+        import Footer from "../components/layout/Footer";
+        import Header from "../components/layout/Header";
+
+        to 
+
+        import Footer from "@/layout/Footer";
+        import Header from "@/layout/Header";

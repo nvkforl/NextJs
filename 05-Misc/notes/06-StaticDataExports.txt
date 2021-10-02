@@ -1,0 +1,25 @@
+Next build,start and export
+
+Next build - Builds the application for production in the .next folder
+
+next start - starts a node.js server that supports hybrid pages, serving both statically generated and server-side rendered(SSR) pages
+
+next export - exports all the pages to static HTML, that can be served without the need of node.js server
+                - can be hosted in CDN
+                - cannot be used for ISR (incemetal server rendeting) and SSR (Server side rendering)
+                - can be used for landing pages,blogs and any app where the content is generated at build time
+
+
+using next export                
+-----------------
+1. in package.json 
+
+  "scripts": {
+        ....
+        "export":"next build && next export",
+        ....
+  },
+2. npm run export - to build the app
+    - should not use getServerSideProps in the  code
+    - we can use getStaticProps. conditions apply - need to hard code the fallback=false for [blodId].js like pages
+    - cannot use "next/image" componet in this

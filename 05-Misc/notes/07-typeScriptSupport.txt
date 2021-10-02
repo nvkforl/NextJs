@@ -1,0 +1,20 @@
+for the typeScript support 
+
+1. Create a file tsconfig.json file
+2. yarn add --dev @types/react  or
+   npm add --dev @types/react
+3. after running this command file will be generated in tsconfig.json
+4. it also generates next-env.d.ts file by the compiler 
+5. if we use tsconfig.json then jsconfig.json will not work
+    ex: ModuleNotFoundError: Module not found: Error: Can't resolve 'styles/globals.css'
+    
+    Then add baseUrl and paths in tsconfig.json from jsconfig.json
+    
+    "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/layout/*": [
+        "components/layout/*"
+      ]
+    },
+    "target": "es5",

@@ -1,0 +1,35 @@
+_app.js defines the App layout
+
+
+in about page add
+// This  include Page and footer only
+// by excluding Header in the component
+About.getLayout = function PageLayout(page) {
+  return (
+    <>
+      {page}
+      <Footer />
+    </>
+  );
+};
+
+
+in _app.js file add 
+function MyApp({ Component, pageProps }) {
+  // This Function will be called from the about page
+  // As it contains PageLayout function
+  // This is called as Single layout for a specific page - Exampel About page
+  if (Component.getLayout) {
+    return Component.getLayout(<Component {...pageProps} />);
+  }
+
+  // This is called for all pages which does not contain PageLayout function
+  return (
+    //All pages contains Header, Content and footer componenets
+    <>
+      <Header />
+      <Component {...pageProps} />
+      <Footer />
+    </>
+  );
+}

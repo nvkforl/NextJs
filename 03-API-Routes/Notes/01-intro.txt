@@ -1,0 +1,23 @@
+Comments index.js 
+fetchComments -> /api/comments/index.js
+submitComment -> /api/comments/index.js
+deleteComment -> /api/comments/${commetId}
+
+https://jasonwatmore.com/post/2021/04/20/next-js-10-crud-example-with-react-hook-form
+
+
+Premium Learning 
+Full Stack Apps with Next js using Redux Part 1 | Complete Next.js
+
+
+
+[...params].js is an example of catch all routes
+1.  http://localhost:/3000/api/one/two/three
+    output in browser is : ["one","two","three"]
+
+2. http://localhost:/3000/api
+    output: we will get 404 error
+
+3. if we rename the file as [[...params]].js   
+    then for the url http://localhost:/3000/api -> we will not get 404 error
+    but need to delete /pages/api/index.js in order to work with [[...params]].js

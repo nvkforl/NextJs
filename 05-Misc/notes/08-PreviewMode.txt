@@ -1,0 +1,4 @@
+Preview mode
+------------
+
+1. It is specifically designed for CMS

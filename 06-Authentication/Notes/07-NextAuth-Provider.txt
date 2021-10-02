@@ -1,0 +1,16 @@
+To share the session accros the components we need to use NextAuth Provider
+
+To configure it.
+1.  in _app.js
+        import {Provider} from 'next-auth/client';
+
+        <Provider>
+            <Header />
+            <Component {...pageProps} />
+        </Provider>
+
+
+2. in index.js
+        import { useSession } from "next-auth/client";
+
+        const [session, loading] = useSession();

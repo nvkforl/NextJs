@@ -1,0 +1,4 @@
+1. using Next-auth library
+2. Authenticating with gmail
+3. Handle sign-in/out and securing the app
+4. How to work with mongo DB

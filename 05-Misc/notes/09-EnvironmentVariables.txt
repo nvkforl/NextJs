@@ -1,0 +1,10 @@
+Env Variables
+-------------
+
+1. Create a file .env.local
+2. This file is git ignored 
+3. process.env we cannot destructure 
+4. To reflect the changes we need to build the app, then only the changes will take effect
+5. by defalut process.env Variables are not rendered in ui so that developer need not expose that value
+6. If you want to expose the env Variables the need to prefix the vaiable with "NEXT_"
+        Ex: NEXT_PUBLIC_VIEW=123

@@ -1,0 +1,27 @@
+Styling
+-------
+
+1. Global style - write every thing in globals.css so it will be applied to all pages
+
+2. components style - 
+    a. create 2 pages in pages/api/about.js & contact.js 
+    b. create 2 css files in styles/About.module.css & Contact.module.css
+    c. import the css in respective pages like
+            import styles from "../styles/Contact.module.css";use it as <div className = {styles.highlight}
+            import styles from "../styles/About.module.css"; use it as <div className = {styles.highlight}
+    d. this avoid names collision whithin the components only
+
+3. SASS or SCSS
+    a. npm install sass 
+    b. create 2 pages in pages/api/about.js & contact.js 
+    c. create 2 css files in styles/About.module.scss & Contact.module.scss
+    d. import the css in respective pages like
+            import styles from "../styles/Contact.module.scss";use it as <div className = {styles.highlight}
+            import styles from "../styles/About.module.scss"; use it as <div className = {styles.highlight}
+    e. this avoid names collision whithin the components only
+
+4. CSS in JS solution
+    a. create css-in-js.js 
+
+
+_app.js is the wrapper component for every page in the application

@@ -1,0 +1,9 @@
+image component is used to minfy/optimize the size of the image  
+
+1. images should be in public folder
+2. use of img HTML tag does not optimize the images whille rendering
+    <img src={`/${path}.jpeg`} alt="image" width="280" height="420" />
+
+3. use of this will automatically optimize the image
+    import Image from "next/image";
+    <Image src={`/${path}.jpeg`} alt="image" width="280" height="420" />
